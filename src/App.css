@@ -26,3 +26,25 @@
     font-size: 55px;
     border-radius: 38px;
 }
+
+.numbers {
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+  }
+
+  .number-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(47, 81, 155);
+    color: white;
+    border-radius: 50%;
+    width: 72px;
+    height: 72px;
+    margin: 12px;
+    font-weight: bold;
+    font-size: 24px;
+    cursor: pointer;    
+  }
+
