@@ -67,3 +67,22 @@
     font-size: 24px;
     cursor: pointer;
   }
+
+  .specials {
+    display: flex;
+  }
+
+  .special-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(52, 96, 214);
+    color: white;
+    border-radius: 50%;
+    width: 72px;
+    height: 72px;
+    margin: 12px;
+    font-weight: bold;
+    font-size: 24px;
+    cursor: pointer;
+  }
