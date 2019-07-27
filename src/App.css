@@ -27,6 +27,11 @@
     font-size: 48px;
 }
 
+.number-button.zero {
+    width: 168px;
+    border-radius: 32px;
+  }
+
 .numbers {
     display: flex;
     flex-wrap: wrap;
