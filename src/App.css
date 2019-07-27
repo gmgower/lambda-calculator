@@ -48,3 +48,22 @@
     cursor: pointer;    
   }
 
+  .operators {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .operator-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(37, 136, 167);
+    color: white;
+    border-radius: 50%;
+    width: 72px;
+    height: 72px;
+    margin: 12px;
+    font-weight: bold;
+    font-size: 24px;
+    cursor: pointer;
+  }
