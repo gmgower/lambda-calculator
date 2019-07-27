@@ -23,16 +23,20 @@ const [displayValue, setDisplayValue] = useState('')
   return (
     <div className="container">
       <Logo />
-      <div className="App">
-        {/* STEP 4 - Render your components here and be sure to properly import/export all files */}
-      </div>
       <Display number={0}/>
-      <Numbers />
-      <Operators />
-      <Specials />
+      <div className="App">
+        <div>
+        <Specials />
+        <Numbers  />
+        </div>
+        <div>
+        <Operators />
+        </div>
+      </div>
     </div>
   );
 }
 
 export default App;
+
 
