@@ -18,22 +18,34 @@ function App() {
   // Your functions should accept a parameter of the the item data being displayed to the DOM (ie - should recieve 5 if the user clicks on
   // the "5" button, or the operator if they click one of those buttons) and then call your setter function to update state.
   // Don't forget to pass the functions (and any additional data needed) to the components as props
-const [displayValue, setDisplayValue] = useState('')
+  
+  const [displayValue, setDisplayValue] = useState('0')
+  
+// Only display number 
+// const addNumber = (number) => {
+//   setDisplayValue(displayValue => displayValue + number);
+//   }
 
-const addNumber = (number) => {
-  setDisplayValue(displayValue => displayValue + number);
+const updateValue = paramValue => {
+  setDisplayValue(displayValue === '0' ? paramValue : displayValue + paramValue)
 }
+
+const calculateValue = () => {
+  setDisplayValue(eval(displayValue));
+}
+
+
   return (
     <div className="container">
       <Logo />
       <Display number={displayValue}/>
       <div className="App">
         <div>
-        <Specials />
-        <Numbers addNumber={addNumber} />
+        <Specials updateValue={updateValue} />
+        <Numbers  updateValue={updateValue}/>
         </div>
         <div>
-        <Operators />
+        <Operators updateValue={updateValue} calculateValue={calculateValue} />
         </div>
       </div>
     </div>
