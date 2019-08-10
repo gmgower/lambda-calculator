@@ -8,10 +8,10 @@ import {numbers} from "../../../data";
 
 const Numbers = ({updateValue}) => {
   // STEP 2 - add the imported data to state
-  const [numberState, setNumberState] = useState(numbers)
+  const [numberState] = useState(numbers)
 
-  console.log('numberState from Numbers Component', numberState)
-  console.log(numbers)
+  // console.log('numberState from Numbers Component', numberState)
+  // console.log(numbers)
   
   return (
     <div className="numbers">

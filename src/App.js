@@ -30,6 +30,8 @@ const updateValue = paramValue => {
   setDisplayValue(displayValue === '0' ? paramValue : displayValue + paramValue)
 }
 
+const resetValue = () => setDisplayValue('0')
+
 const calculateValue = () => {
   setDisplayValue(eval(displayValue));
 }
@@ -41,8 +43,8 @@ const calculateValue = () => {
       <Display number={displayValue}/>
       <div className="App">
         <div>
-        <Specials updateValue={updateValue} />
-        <Numbers  updateValue={updateValue}/>
+        <Specials updateValue={updateValue} resetValue={resetValue}/>
+        <Numbers  updateValue={updateValue} />
         </div>
         <div>
         <Operators updateValue={updateValue} calculateValue={calculateValue} />

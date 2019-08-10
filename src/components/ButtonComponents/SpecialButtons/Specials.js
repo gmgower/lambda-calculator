@@ -7,15 +7,24 @@ import SpecialButton from "./SpecialButton.js";
 import { specials } from "../../../data.js";
 
 const Specials = (props) => {
+  // console.log('Specials', props)
   // STEP 2 - add the imported data to state
-const [specialsState, setspecialState] = useState(specials)
+const [specialsState] = useState(specials)
+
+const clickSpecialBtn = btn => {
+  if(btn === 'C') {
+    props.resetValue()
+  } else {
+    props.updateValue(btn)
+  }
+}
 
   return (
     <div className="specials">
       {/* STEP 3 - Use .map() to iterate over your array data and return a button
        component matching the name on the provided file. Pass
        it any props needed by the child component*/}
-       {specialsState.map(special => <SpecialButton key={special} text={special}/>)}
+       {specialsState.map(special => <SpecialButton key={special} text={special} updateValue={() => clickSpecialBtn(special)} />)}
     </div>
   );
 };
